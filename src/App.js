@@ -22,6 +22,15 @@ export default function App() {
         setError(err.message);
       });
   };
+        //can also do the above this way:
+        // const getData = async () => {
+        //   setIsFetchingData(true);
+
+        //   const res = await fetchMissions()
+        //   setIsFetchingData(false)
+        //   setMissions(res.data)
+        // };
+
   return (
     <div className="App">
       <h1>Space Missions</h1>

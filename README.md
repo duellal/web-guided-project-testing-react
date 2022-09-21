@@ -43,12 +43,16 @@ Questions to ask yourself during Unit Tests:
          const mockGetData = jest.fn()
    - allows to fake a library call
 
+- fake library calls:
+   - when a component loads a library, it loads the function instead (the mock data)
+   - can also create our own fake output
+         import {fetchMissions as mockFetchMissions} from './api/fetchMissions'
+         jest.mock('./api/fetchMissions')
 
 # Q+A:
 There seems like there could be an inifinite amount of things you could test - how do you know what to focus on? Or when it is enough?
 - You definitely could go on for a long time testing. The reccommendation is: test what is most important to the functioning of the application. What will change the most, what the user will interact the most. 
 -  You should have an intuitive sense of what to test for based on the ways the application will be used. 
 - What are things people expect to work on your application?
-
 
 
